@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.getJSON("user.json",function(data){
+                    $("#dis").html("<p>ID:"+data.id+"</p>");
+                    $("#dis").append("<p>Name:"+data.name+"</p>");
+                    $("#dis").append("<p>Gender:"+data.gender+"</p>");
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="dis" >PAGE 3</div>
+<button type="button">CLICK</button>
+</body>
+</html>

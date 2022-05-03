@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>Search</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <style>
         #result{
@@ -23,8 +24,6 @@
         {
             background:#c0c0c0;
         }
-
-
     </style>
 
     <script>
@@ -36,6 +35,7 @@
                 var expression=new RegExp(searchField,"i");
                 $.getJSON('fakeImages.json',function(data){
                     $.each(data,function(key,value){
+
                         if(value.fname.search(expression)!=-1 || value.lname.search(expression)!=-1)
                         {
                             $('#result').append('<li class="list-group-item link-class"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail"/>'+value.fname+'<span class="text-primary">'+value.lname+'</span></li>');
@@ -55,22 +55,71 @@
             });
         });
     </script>
+
+    <script>
+        $(document).ready(function(){
+
+                $.getJSON('fakeImages.json',function(data){
+                    $.each(data,function(key){
+
+                        $('#disimages1').append('<img src="'+data[key].image+'" height="450" width="450"><p class="h1" style="color: red">'+data[key].fname+"&nbsp"+data[key].lname+'</p>');
+
+                    });
+                });
+            });
+    </script>
 </head>
+
+<header>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">CIF</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">SignIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reg.php">SignUp</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
 <body>
 <div class="container" style="width:1000px;">
-    <h1 align="center">Data search using Ajax JQuery</h1>
-    <h3 align="center">Student Data</h3>
-    <br/><br/>
+    <h1 align="center">Search Favorite Images</h1>
+    <br/>
     <div align="center">
         <input type="search" id="search" placeholder="Search By Name" class="form-control"/>
+
     </div>
     <ul class="list-group" id="result"></ul>
     <div align="center">
         <img id="disImg" >
         <p id="display" class="h3" align="center"></p>
     </div>
-
     <br/>
 </div>
+<div>
+    <div class="container" align="center">
+        <div class="row" >
+            <div class="col" id="disimages1">
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
+<footer class="pt-5">
+    <p class="text-center">Project: CIF<br>
+        <a href="www.google.com">Binura Thiranjaya</a></p>
+</footer>
 </html>
