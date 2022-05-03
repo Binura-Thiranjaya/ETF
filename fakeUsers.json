@@ -1,0 +1,19 @@
+[
+  {
+    "uname": "Test1@gmail.com",
+    "password": "123"
+  },
+  {
+    "uname": "Test2@gmail.com",
+    "password": "456"
+  },
+  {
+    "uname": "Test3@gmail.com",
+    "password": "789"
+  },
+  {
+    "uname": "Test4@gmail.com",
+    "password": "101"
+  }
+
+]
