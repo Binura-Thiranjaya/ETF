@@ -1,0 +1,42 @@
+[
+  {
+    "fname": "Flower One",
+    "image": "http://localhost/ETF/Project/img/img1.jpeg"
+  },
+  {
+    "fname": "Flower Two",
+    "image": "http://localhost/ETF/Project/img/img2.jpeg"
+  },
+  {
+    "fname": "Flower Three",
+    "image": "http://localhost/ETF/Project/img/img3.jpeg"
+  },
+  {
+    "fname": "Flower Four",
+    "image": "http://localhost/ETF/Project/img/img4.jpeg"
+  },
+  {
+    "fname": "Flower Five",
+    "image": "http://localhost/ETF/Project/img/img5.png"
+  },
+  {
+    "fname": "Flower Six",
+    "image": "http://localhost/ETF/Project/img/img6.jpeg"
+  },
+  {
+    "fname": "Flower Seven",
+    "image": "http://localhost/ETF/Project/img/img1.jpeg"
+  },
+  {
+    "fname": "Flower Eight",
+    "image": "http://localhost/ETF/Project/img/imgHome1.jpeg"
+  },
+  {
+    "fname": "Flower Nine",
+    "image": "http://localhost/ETF/Project/img/imgHome2.jpeg"
+  },
+  {
+    "fname": "Flower Ten",
+    "image": "http://localhost/ETF/Project/img/imgHome2.jpeg"
+  }
+]
