@@ -7,9 +7,9 @@ $data[] = array(
     "password" => $password
 );
 
-$inp = file_get_contents('user.json');
+$inp = file_get_contents('fakeUser.json');
 $tempArray = json_decode($inp);
 array_push($tempArray, $data[0]);
 $jsonData = json_encode($tempArray);
-file_put_contents('user.json', $jsonData);
+file_put_contents('fakeUser.json', $jsonData);
 ?>

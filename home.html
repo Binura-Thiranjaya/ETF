@@ -15,7 +15,7 @@
         $(document).ready(function() {
             $.getJSON('fakeData.json', function (data) {
                 $('#image1').append('<img class="mx-auto d-block w-50"   src="'+data[1].image+'" alt="First slide">');
-                $('#image2').append('<img class=" mx-auto d-block w-50"  src="'+data[3].image+'" alt="First slide">');
+                $('#image2').append('<img class=" mx-auto d-block w-50"  src="'+data[3].image+'" alt="Second slide">');
                 $('#image3').append('<img class=" mx-auto d-block w-50"  src="'+data[4].image+'" alt="First slide">');
             });
         });
@@ -24,7 +24,7 @@
 
 <header>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-blue">
             <a class="navbar-brand" href="#">CIF</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,7 +46,7 @@
         </nav>
     </div>
 </header>
-<body style="background-color: whitesmoke">
+<body style="background-image: url('./img/bg.webp');">
 
 <!------>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -78,9 +78,6 @@
             </a>
 
     </div>
-        <h1 id="img1"></h1>
-    <h1 id="img2"></h1>
-    <h1 id="img3"></h1>
 
 
 </body>
